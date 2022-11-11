@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style type="text/css">
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-y: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: #b9b7b7;
+            display: block;
+        }
+
+        /* .sidenav a: hover {
+            color: #f1f1f1;
+        } */
+
+        .main{
+            margin-left: 160px;
+            padding: 0px 10px;
+        }
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block title %}Ivan's website{% endblock %}</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Sidenav -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/create">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/2">View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="/register">Register</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded py-4">
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link fs-5 pr-4" href="/">Homepage</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link fs-5 pr-4" href="/create">Create</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link fs-5 pr-4" href="/2">View</a>
+                  </li>
+                <li class="nav-item active">
+                  <a class="nav-link disabled fs-5" href="#">Register</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+
+
+        <!-- <div class='sidenav'>
+            <a href="/">Home</a>
+            <a href="/create">Create</a>
+            <a href="/2">View</a>
+            <a href="/register">Register</a>
+        </div> -->
+
+    <div class="container pt-3">
+        <h1 class="text-center text-secondary fs-2">My site with to-do lists</h1>
+        <hr class="mt-0 mt-4">
+        <div class="text-secondary ml-5">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <!-- <div id='content', name='content', class="main">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h1 clas="mt-2">My site</h1>
+                <hr class="mt-0 mt-4">
+
+
+            </div>
+        </div>
+    </div> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

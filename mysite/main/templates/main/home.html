@@ -1,0 +1,66 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<!-- <h2 class="fs-2 pt-3">Current To-Do lists:</h2> -->
+
+<div class="container-fluid pt-3">
+    <div class="row justify-content-center">
+        <div class="col-sm">
+            <h2 class="fs-2 pt-3">Current To-Do lists:</h2>
+        </div>
+
+        <div class="col-sm">
+            <table class="table table-fixed justify-content-center w-0.5">
+                <thead>
+                <tr>
+                    <th scope="col">List name</th>
+                    <th scope="col">Count of items</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    {% for name, count, id in context_todo %}
+                        <tr>
+                            <td><a href="/{{id}}">{{name}}</a></td>
+                            <td>{{count}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>     
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="table100 ver1 m-b-110">
+    <div class="table100-head">
+    <table>
+    <thead>
+    <tr class="row100 head">
+    <th class="cell100 column1">Class name</th>
+    <th class="cell100 column2">Type</th>
+    <th class="cell100 column3">Hours</th>
+    <th class="cell100 column4">Trainer</th>
+    <th class="cell100 column5">Spots</th>
+    </tr>
+    </thead>
+    </table>
+    </div>
+    <div class="table100-body js-pscroll ps ps--active-y">
+    <table>
+    <tbody>
+    <tr class="row100 body">
+    <td class="cell100 column1">Like a butterfly</td>
+    <td class="cell100 column2">Boxing</td>
+    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+    <td class="cell100 column4">Aaron Chapman</td>
+    <td class="cell100 column5">10</td>
+    </tr>
+    </tbody>
+    </table> -->
+
+
+{% endblock %}
+
+
